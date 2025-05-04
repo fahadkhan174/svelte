@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  build_site:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -24,20 +24,29 @@ jobs:
       - name: Build
         env: 
           BASE_PATH: '/svelte'
-        run: npm run build
+        run: |
+          npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          name: svelte-kit-build
-          path: build
-          if: always()
-        id: upload-artifact
+          # this should match the `pages` option in your adapter-static options
+          path: 'build/'
 
-      - name: Deploy to gh-pages
+  deploy:
+    needs: build_site
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy
+        id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ARTIFACT_NAME: svelte-kit-build
-          PATH: build
-          BRANCH: gh-pages
+  
