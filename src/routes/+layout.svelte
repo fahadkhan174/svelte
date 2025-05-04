@@ -1,6 +1,6 @@
 <script lang="ts">
 	export const prerender = true;
-	
+
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import '../app.css';
@@ -45,7 +45,7 @@
 			Basics
 		</a>
 	</div>
-	<div class="pl-6">
+	<div>
 		{@render children()}
 	</div>
 </div>
