@@ -1,6 +1,8 @@
 <script lang="ts">
+	export const prerender = true;
+	
+	import { base } from '$app/paths';
 	import { page } from '$app/state';
-	import Navbar from '@/components/Navbar.svelte';
 	import '../app.css';
 
 	let { children } = $props();
@@ -9,11 +11,7 @@
 <div class="container">
 	<div class="pl-6">
 		<!-- svelte-ignore a11y_consider_explicit_label -->
-		<a
-			class="mr-4 text-lg text-blue-800 hover:underline"
-			class:underline={page.url.pathname === '/'}
-			href="/"
-		>
+		<a class="mr-4 text-lg text-blue-800 hover:underline" href="{base}/">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 17.350000381469727 105.05000305175781 36.05000305175781"
@@ -34,25 +32,20 @@
 		</a>
 		<a
 			class="mr-4 h-12 w-12 text-lg text-blue-800 hover:underline"
-			class:underline={page.url.pathname === '/'}
-			href="/"
+			class:underline={page.url.pathname === base + '/'}
+			href="{base}/"
 		>
 			Home
 		</a>
 		<a
 			class="mr-4 h-12 w-12 text-lg text-blue-800 hover:underline"
-			class:underline={page.url.pathname.includes('/basics')}
-			href="/basics"
+			class:underline={page.url.pathname.includes(base + '/basics')}
+			href="{base}/basics"
 		>
 			Basics
 		</a>
-	</div>
-	<!-- <Navbar /> -->
-	<div class="pl-6">
 	</div>
 	<div class="pl-6">
 		{@render children()}
 	</div>
 </div>
-
-export const prerender = true;
