@@ -54,3 +54,5 @@
 		{@render children()}
 	</div>
 </div>
+
+export const prerender = true;
