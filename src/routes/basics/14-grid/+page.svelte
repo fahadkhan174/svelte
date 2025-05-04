@@ -1,20 +1,15 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdn.tailwindcss.com"></script>
-		<title>Grid</title>
-	</head>
-	<body>
+<svelte:head>
+	<title>Grid</title>
+</svelte:head>
+
+<div>
+	<div>
 		<!-- Grid cols and rows -->
 
 		<!-- Col and row span -->
-	</body>
-</html>
+	</div>
 
-<!-- 
+	<!-- 
   Grid Template Columns
   grid-cols-1	    grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-cols-2	    grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -31,7 +26,7 @@
   grid-cols-none	grid-template-columns: none;
  -->
 
-<!-- Grid Template Rows
+	<!-- Grid Template Rows
   grid-rows-1	    grid-template-rows: repeat(1, minmax(0, 1fr));
   grid-rows-2	    grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-rows-3	    grid-template-rows: repeat(3, minmax(0, 1fr));
@@ -40,3 +35,4 @@
   grid-rows-6	    grid-template-rows: repeat(6, minmax(0, 1fr));
   grid-rows-none	grid-template-rows: none;
   -->
+</div>
