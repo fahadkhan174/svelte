@@ -5,8 +5,8 @@
 	let { children } = $props();
 </script>
 
-<div class="grid grid-cols-3 gap-4">
-	<div class="col-span-1">
+<div class="grid grid-cols-12 gap-4">
+	<div class="col-span-3">
 		<div class="container h-full max-w-lg bg-gray-50 p-6">
 			<h1 class="text-3xl text-blue-800">
 				<a href="{base}/basics"> Tailwind CSS Basics </a>
@@ -149,7 +149,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="col-span-2 p-12">
+	<div class="col-span-9 p-12">
 		{@render children()}
 	</div>
 </div>
