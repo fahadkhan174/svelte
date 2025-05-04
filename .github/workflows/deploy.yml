@@ -23,7 +23,7 @@ jobs:
 
       - name: Build
         env: 
-          BASE_PATH: '/svelte'
+          BASE_PATH: '/learn-svelte'
         run: |
           npm run build
 
