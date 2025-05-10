@@ -1,4 +1,6 @@
 <script>
+	import { browser } from '$app/environment';
+
 	function showBrowserWidth() {
 		const width =
 			window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -10,8 +12,11 @@
 			console.error('No h1 element found in the document');
 		}
 	}
-	window.onload = showBrowserWidth;
-	window.onresize = showBrowserWidth;
+
+	if (browser) {
+		window.onload = showBrowserWidth;
+		window.onresize = showBrowserWidth;
+	}
 </script>
 
 <div
