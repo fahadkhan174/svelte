@@ -43,6 +43,13 @@
 		>
 			Basics
 		</a>
+		<a
+			class="mr-4 h-12 w-12 text-lg text-blue-800 hover:underline"
+			class:underline={page.url.pathname.includes(base + '/mini-projects')}
+			href="{base}/mini-projects"
+		>
+			Mini Projects
+		</a>
 	</div>
 	<div>
 		{@render children()}
