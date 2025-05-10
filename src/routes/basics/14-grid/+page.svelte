@@ -6,6 +6,18 @@
 	<div>
 		<!-- Grid cols and rows -->
 
+		<div class="grid-col-1 grid md:grid-cols-3">
+			<div class="border border-blue-600 bg-blue-100 p-10 md:col-span-2 md:row-span-2">item 1</div>
+			<div class="border border-blue-600 bg-blue-100 p-10">item 2</div>
+			<div class="border border-blue-600 bg-blue-100 p-10">item 3</div>
+			<div class="border border-blue-600 bg-blue-100 p-10">item 4</div>
+			<div class="border border-blue-600 bg-blue-100 p-10">item 5</div>
+			<div class="border border-blue-600 bg-blue-100 p-10">item 6</div>
+			<div class="border border-blue-600 bg-blue-100 p-10 md:col-span-2">item 7</div>
+			<div class="border border-blue-600 bg-blue-100 p-10">item 8</div>
+			<div class="border border-blue-600 bg-blue-100 p-10 md:col-span-3">item 9</div>
+		</div>
+
 		<!-- Col and row span -->
 	</div>
 

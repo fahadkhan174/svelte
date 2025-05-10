@@ -1,5 +1,4 @@
 <script lang="ts">
-	export const prerender = true;
 
 	import { base } from '$app/paths';
 	import { page } from '$app/state';

@@ -21,4 +21,24 @@
 @theme {
 	--font-opensans: OpenSans, sans-serif;
 	--font-pacifico: Pacifico, sans-serif;
+
+	--font-grafik: 'Grafik', 'sans-serif';
+	--font-merrriweather: 'Merriweather', 'serif';
+
+	--color-primary: #ff5733;
+	--color-secondary: #fffc33;
+
+	--animate-spin-slow: spin 5s linear infinite;
+	--animate-wiggle: wiggle 1s ease-in-out infinite;
+	@keyframes wiggle {
+		0%,
+		100% {
+			transform: rotate(-12deg);
+		}
+		50% {
+			transform: rotate(12deg);
+		}
+	}
 }
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
