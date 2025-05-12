@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	let { children } = $props();
 </script>
@@ -18,7 +17,9 @@
 				>
 					<div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
 						<p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-							<a href="{base}{page.url.pathname}/email-subscribe" class="hover:underline">Email Subscribe</a>
+							<a href="{page.url.pathname}/email-subscribe" class="hover:underline"
+								>Email Subscribe</a
+							>
 						</p>
 						<p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
 							<!-- Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
