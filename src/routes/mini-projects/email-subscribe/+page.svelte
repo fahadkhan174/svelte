@@ -2,4 +2,4 @@
 	<title>Email Subscribe | Mini Projects</title>
 </svelte:head>
 
-<div class="text-2xl text-black">Email Subscribe</div>
+<div class="flex justify-center items-center px-6">Hello</div>
