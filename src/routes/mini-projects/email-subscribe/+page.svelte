@@ -15,7 +15,9 @@
 			<!-- Image -->
 			<img
 				src={image}
-				class="object-fit h-80 transform rounded-xl duration-200 hover:scale-105 hover:rounded-xl md:h-64 md:rounded-l-xl md:rounded-r-none"
+				class="object-fit h-80 transform rounded-xl duration-200
+				 hover:rounded-xl
+				  md:h-64 md:rounded-l-xl md:rounded-r-none md:hover:scale-105"
 				alt=""
 			/>
 		</div>
@@ -31,7 +33,7 @@
 				<input
 					type="text"
 					class="border border-zinc-600 bg-zinc-800 p-2 px-4 text-center
-					 text-white  placeholder:text-center
+					 text-white placeholder:text-center
 					  placeholder:text-xs focus:outline-none md:text-left placeholder:md:text-left"
 					placeholder="Enter your email"
 				/>
